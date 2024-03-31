@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<body>
+<div class="container">
+
+    <div class="row">
+        <div class="col-sm-6">
+            <h2>Show User</h2>
+        </div>
+    </div>
+    <div class="row" >
+        <div class="col-sm-8">
+            <form action="#"
+                  th:action="@{/users/show/{id}(id=${user.id})}"
+                  th:object="${user}"
+                  method="post">
+                <label for="name">Name</label>
+                <input type="text" th:field="*{name}" id="name" placeholder="Name">
+                <span th:if="${#fields.hasErrors('name')}" th:errors="*{name}"></span>
+                <label for="surname">Surname</label>
+                <input type="text" th:field="*{surname}" id="email" placeholder="Email">
+                <span th:if="${#fields.hasErrors('surname')}" th:errors="*{surname}"></span>
+                <input type="submit" value="Update User">
+            </form>
+        </div>
+    </div>
+</div>
+
+
+</body>
+</html>
