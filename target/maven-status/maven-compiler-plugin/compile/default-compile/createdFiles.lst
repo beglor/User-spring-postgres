@@ -1,0 +1,6 @@
+ru\stanislav\spring\service\impl\UserServiceImpl.class
+ru\stanislav\spring\service\UserService.class
+ru\stanislav\spring\repository\UserRepository.class
+ru\stanislav\spring\Main.class
+ru\stanislav\spring\entity\User.class
+ru\stanislav\spring\conrtoller\UserController.class
